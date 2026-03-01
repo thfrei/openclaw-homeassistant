@@ -239,8 +239,8 @@ class OpenClawGatewayClient:
                 params={
                     "message": message,
                     "sessionKey": self._session_key,
-                    "idempotencyKey": idempotency_key,
-                    **({"options": options} if options else {}),
+                    "idempotencyKey": idempotency_key
+                    # **({"options": options} if options else {}),
                 },
                 timeout=10.0,  # Initial ack should be quick
             )
